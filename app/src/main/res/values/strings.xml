@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">CustomActionBar</string>
+    <string name="app_name">Custom Action Bar</string>
+    <string name="button">View Custom Action Bar</string>
 </resources>
