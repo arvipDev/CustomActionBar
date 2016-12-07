@@ -1,6 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:id="@+id/actionbar_layout"
+    android:shadowColor="@color/shadow"
+    android:shadowRadius="5"
+    android:shadowDx="5"
+    android:shadowDy="5">
 
-</LinearLayout>
+    <RelativeLayout
+        android:layout_width="56dp"
+        android:layout_height="0dp"
+        android:id="@+id/custom_ab_rl_back"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <ImageView
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:id="@+id/custom_ab_b_back"
+            android:background="@drawable/back_arrow_nine"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginLeft="18dp"
+            android:contentDescription="@string/backbutton" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_width="0dp"
+        android:gravity="center_vertical"
+        android:layout_height="0dp"
+        android:id="@+id/custom_ab_title"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/custom_ab_rl_menu"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/custom_ab_rl_back"
+        android:layout_marginLeft="56dp"
+        android:layout_marginRight="56dp" />
+
+    <RelativeLayout
+        android:layout_width="56dp"
+        android:layout_height="0dp"
+        android:id="@+id/custom_ab_rl_menu"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <ImageView
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:id="@+id/custom_ab_b_menu"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginLeft="18dp"
+            android:background="@drawable/menu_logo_nine"
+            android:contentDescription="@string/menubutton" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
