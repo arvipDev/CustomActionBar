@@ -10,8 +10,18 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.purushotham.arvind.customactionbar.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+
+    <Button
+        android:text="@string/button"
+        android:layout_width="250dp"
+        android:layout_height="59dp"
+        android:id="@+id/button"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:textColor="@android:color/black"
+        android:onClick="onButtonClick"
+        android:background="@android:color/holo_orange_light"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
