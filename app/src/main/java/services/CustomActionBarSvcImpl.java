@@ -3,6 +3,7 @@ package services;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Build;
+import android.support.constraint.ConstraintLayout;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
@@ -11,24 +12,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.purushotham.arvind.customactionbar.R;
 
-public class RedActionBarSvcImpl {
+public class CustomActionBarSvcImpl {
 
     private Context context;
     private android.support.v7.app.ActionBar actionBar;
     private String title_text;
 
-    public RedActionBarSvcImpl(Context context, android.support.v7.app.ActionBar actionBar, String title) {
+    public CustomActionBarSvcImpl(Context context, android.support.v7.app.ActionBar actionBar, String title) {
         this.context = context;
         this.actionBar = actionBar;
         this.title_text = title;
         Log.d("action bar", actionBar.toString());
-        setting();
     }
 
-    private void setting ()
+    public void setting ()
     {
         Log.d("Action Bar", "settings");
         LayoutInflater inflate = LayoutInflater.from(context);
@@ -37,7 +38,6 @@ public class RedActionBarSvcImpl {
         ActionBar.LayoutParams layoutParams = new ActionBar.LayoutParams(ActionBar.LayoutParams.MATCH_PARENT,
                 ActionBar.LayoutParams.MATCH_PARENT);
 
-        /*
         if (actionBar != null) {
             actionBar.setDisplayShowHomeEnabled(false);
             actionBar.setDisplayShowTitleEnabled(false);
@@ -58,8 +58,13 @@ public class RedActionBarSvcImpl {
                 }
             });
 
-            RelativeLayout custom_ab_rl_menu = (RelativeLayout) ((Activity)context).findViewById(R.id.custom_ab_rl_menu);
-            custom_ab_rl_menu.setVisibility(View.INVISIBLE);
+            final RelativeLayout custom_ab_rl_menu = (RelativeLayout) ((Activity)context).findViewById(R.id.custom_ab_rl_menu);
+            custom_ab_rl_menu.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(context, "Menu clicked but empty", Toast.LENGTH_LONG).show();
+                }
+            });
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 action.setTranslationZ(5);
@@ -67,8 +72,7 @@ public class RedActionBarSvcImpl {
             }
         }
         else
-            Log.d("RedActionBarSvcImpl", "Null pointer for actionBar");
-            */
+            Log.d("CustomActionBarSvcImpl", "Null pointer for actionBar");
 
     }
 

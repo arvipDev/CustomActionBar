@@ -19,7 +19,7 @@
         </activity>
         <activity
             android:name=".CustomActionBar"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.CUSTOMACTIONBAR" />
 

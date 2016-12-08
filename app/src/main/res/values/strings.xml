@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Custom Action Bar</string>
     <string name="button">View Custom Action Bar</string>
+    <string name="backbutton">Back</string>
+    <string name="menubutton">Menu</string>
 </resources>
