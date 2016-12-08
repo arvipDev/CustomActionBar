@@ -48,12 +48,9 @@
         tools:layout_constraintBottom_creator="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_constraintRight_creator="1"
-        app:layout_constraintRight_toRightOf="@+id/custom_ab_rl_menu"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/custom_ab_rl_back"
-        android:layout_marginLeft="56dp"
-        android:layout_marginRight="56dp" />
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@+id/custom_ab_rl_back"
+        app:layout_constraintRight_toLeftOf="@+id/custom_ab_rl_menu" />
 
     <RelativeLayout
         android:layout_width="56dp"

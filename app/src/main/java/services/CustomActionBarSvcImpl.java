@@ -65,11 +65,6 @@ public class CustomActionBarSvcImpl {
                     Toast.makeText(context, "Menu clicked but empty", Toast.LENGTH_LONG).show();
                 }
             });
-
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                action.setTranslationZ(5);
-                action.setElevation(5);
-            }
         }
         else
             Log.d("CustomActionBarSvcImpl", "Null pointer for actionBar");
